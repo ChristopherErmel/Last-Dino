@@ -1,0 +1,111 @@
+/*Idle*/
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -4px -4px;
+	width: 15px;
+	height: 17px;
+}
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -28px -4px;
+	width: 15px;
+	height: 17px;
+}
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -52px -5px;
+	width: 15px;
+	height: 16px;
+}
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -76px -4px;
+	width: 15px;
+	height: 17px;
+}
+
+
+/*Moving right*/
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -100px -4px;
+	width: 15px;
+	height: 16px;
+}
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -124px -5px;
+	width: 15px;
+	height: 16px;
+}
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -148px -4px;
+	width: 15px;
+	height: 17px;
+}
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -172px -4px;
+	width: 15px;
+	height: 16px;
+}
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -196px -5px;
+	width: 15px;
+	height: 16px;
+}
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -220px -4px;
+	width: 15px;
+	height: 17px;
+}
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -244px -4px;
+	width: 15px;
+	height: 17px;
+}
+
+/*Moving Left*/
+
+
+
+/*Jumping*/
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -266px -4px;
+	width: 15px;
+	height: 17px;
+}
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -292px -3px;
+	width: 15px;
+	height: 18px;
+}
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -316px -4px;
+	width: 15px;
+	height: 17px;
+}
+
+
+
+
+/*Dead*/
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -340px -3px;
+	width: 15px;
+	height: 18px;
+}
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -362px -4px;
+	width: 15px;
+	height: 17px;
+}
+.sprite {
+	background: url('imgs/DinoSprites - vita.png') no-repeat -386px -4px;
+	width: 15px;
+	height: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+

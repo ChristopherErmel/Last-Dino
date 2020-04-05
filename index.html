@@ -1,0 +1,57 @@
+<!-- <!doctype html> -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SideScrollerSite Example</title>
+<!-- <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+<link href="reset.css" rel="stylesheet" async>
+<link href="main.css" rel="stylesheet" async>
+<script src="main.js" async></script>
+</head>
+<body>
+	<div id="mainWrapper">
+		<div id="topWrapper">
+					<div id="playerHealth">
+						<div id="heart1" class="heart"></div>
+						<div id="heart2" class="heart"></div>
+						<div id="heart3" class="heart"></div>
+					</div>
+					<button id="resetBtn" class="btn draw-border">Reset</button>	
+					<button id="mainSiteBtn" class="btn draw-border">Main Site</button>
+					<button id="codeBtn" class="btn draw-border">CODE!</button>
+					<div id="playerScore">
+						<p id="scoreTitle">Score:</p>
+						<p id="inGameTime"></p>
+						<p id="inGameScore"></p>
+					</div>
+					<div id="updateLevel">
+						<img src="./includes/menu/menu.png" alt="instructions" height="100%" width="100%" class="levels" id="gameInstr">
+						<p id="lastDino" class="levels">Dino</p>
+						<p id="level1" class="levels">Level 1</p>
+						<p id="level2" class="levels">Level 2</p>
+						<p id="level3" class="levels">Level 3</p>
+						<p id="level4" class="levels">Level 4</p>
+						<p id="level5" class="levels">Level 5</p>
+						<p id="level6" class="levels">Final Level</p>
+					</div>
+			</div>
+		<div id="bottomWrapper">
+		<div class="hillBoundsTop" id="hillBoundsTop" height="100%" width="100%"></div>
+		<div class="hillBoundsMiddle1" id="hillBoundsMiddle1" height="100%" width="100%"></div>
+		<div class="hillBoundsMiddle2" id="hillBoundsMiddle2" height="100%" width="100%"></div>
+		<div class="hillBoundsMiddle3" id="hillBoundsMiddle3" height="100%" width="100%"></div>
+		<div class="hillBoundsBottom" id="hillBoundsBottom" height="100%" width="100%"></div>	
+			<div class="slide-up">
+					<img src="./includes/midBackground/sky.png" alt="sky" height="100%" width="100%" class="sky" id="sky">
+					<img src="./includes/midBackground/far_mountains.png" alt="sky" height="100%" width="100%" class="fMount">
+					<img src="./includes/midBackground/grassy_mountains.png" alt="sky" height="100%" width="100%" class="gMount">
+					<img src="./includes/midBackground/clouds_mid.png" alt="sky" height="100%" width="100%" class="cMid movingClouds" id="midClouds">
+					<img src="./includes/midBackground/hill.png" alt="sky" height="100%" width="100%" id="hill" class="hill">
+					<img src="./includes/midBackground/clouds_front_t.png" alt="sky" height="100%" width="100%" class="cFront movingClouds" id="frontClouds">
+			</div>		
+			<div id="playerModel"></div>						
+		</div>		
+		<div id="groundModel"></div>
+	</div>
+</body>
+</html>

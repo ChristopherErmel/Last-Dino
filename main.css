@@ -1,0 +1,397 @@
+@font-face {
+  font-family: "pixelFont";
+  src: url("./includes/fonts/PressStart2P.ttf");
+}
+
+html, body {
+  	height: 100vh;
+	width: 100vw;
+  overflow: hidden;  
+  margin:0;
+}
+
+
+/*Wrappers*/
+#mainWrapper{
+	background-color: lightblue;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	position: relative;
+}
+#topWrapper{
+	height: 10vh;
+	width: 100vw;
+	background-color: blue;
+	/*display: inline-block;*/
+	position: relative;
+	display: flex; /* make us of Flexbox */
+  align-items: center; /* does vertically center the desired content */
+  justify-content: center; /* horizontally centers single line items */
+  text-align: center; /* optional, but helps horizontally center text that breaks into multiple lines */
+
+}
+#bottomWrapper{
+	height: 100%;
+	width: 100%;
+	/*background-color: green;*/
+	flex-grow: 1;	
+}
+
+/*Mid Background fade in*/
+.slide-up {
+  height:100%;
+  top:0;
+  overflow:hidden;
+  position: relative;
+}
+.slide-up img.sky{
+  /*animation: 1s slide-up;*/
+  margin-top:0%;
+  position: absolute;
+  z-index: 10;
+}
+.slide-up img.fMount{
+  animation: 3s slide-up;
+  margin-top:0%;
+  position: absolute;
+  z-index: 11;
+}
+.slide-up img.gMount{
+  animation: 5s slide-up;
+  margin-top:0%;
+  position: absolute;
+  z-index: 12;
+}
+.slide-up img.cMid{
+  animation: 7s slide-up;
+  margin-top:0%;
+  position: absolute;
+  z-index: 13;
+}
+.slide-up img.hill{
+  animation: 8s slide-up;
+  margin-top:0%;
+  position: absolute;
+  z-index: 14;
+}
+.slide-up img.cFront{
+  animation: 10s slide-up;
+  margin-top:0%;
+  position: absolute;
+  z-index: 16;  
+}
+
+@keyframes slide-up {
+  from {
+    margin-top: 100%;
+    height: 300%; 
+  }
+
+  to {
+    margin-top: 0%;
+    height: 100%;
+  }
+}
+
+@keyframes slideUpDown {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(10px); }
+}
+
+
+
+/*Player Model*/
+#playerModel{
+/*	height: 3vw;
+	width: 3vw;*/
+	position: relative;
+	z-index: 15;	
+/*	animation: 5s fadein;
+	animation-delay: 6.5s;
+	animation-fill-mode: forwards;*/
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes playerIdle{
+      from{background-position-x:0px;}
+      to{background-position-x:-282px;}
+  }
+  @keyframes playerRunRight{
+      from{background-position-x:0px;}
+      to{background-position-x:-562px;}
+  }
+    @keyframes playerRunLeft{
+      from{background-position-x:0px;}
+      to{background-position-x:-562px;}
+  }
+      @keyframes playerDammaged{
+      from{background-position-x:0px;}
+      to{background-position-x:-282px;}
+  }
+        @keyframes playerJump{
+      from{background-position-x:0px;}
+      to{background-position-x:-390px;}
+  }
+
+/*Health for top of screen*/
+#playerHealth{
+	margin: auto;
+  	position: absolute;
+  	top: 2.5%!important;
+	left: 5%;
+	display: inline-block;
+}
+.heart{
+	display: inline-block;
+	height: 100%;
+	width: 33%;
+	float: left;
+	background-size: cover;
+}
+
+/*Fire balls*/
+.fireBalls{
+	z-index: 20;
+	background-size: cover;
+	height: 8%;
+	width: 8%;
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	display: inline-block;
+}
+
+/*Score for top of screen*/
+#scoreTitle{
+	text-align: center;
+	display: inline-block;
+	font-family: "pixelFont";
+	color: black;
+	font-size: .75vw!important;
+}
+#playerScore{
+	margin: auto;
+  	position: absolute;
+  	top: 3%!important;
+	right: 5%;
+	display: inline-block;
+}
+#inGameScore{
+	margin-top: 6%;
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	font-family: "pixelFont";
+	color: black;
+	font-size: 1.15vw!important;
+}
+
+/*Buttons for menu*/
+#resetBtn{
+	margin: auto;
+  	position: absolute;
+  	left: 25%;
+}
+#mainSiteBtn{
+	margin: auto;
+  	position: absolute;
+  	top: 0; left: 0; bottom: 0; right: 0;
+}
+#codeBtn{
+	margin: auto;
+  	position: absolute;
+  	right: 25%;
+}
+/*All button effects for top*/
+#codeBtn, #mainSiteBtn, #resetBtn, #playerHealth, #playerScore{
+	top: 3%;
+	width: 10%;
+	height: 5%;
+	margin: 0 auto;
+	position: absolute;	
+	z-index: 1000;	
+	font-size: 1vw;
+	opacity: 0;
+	animation-fill-mode: forwards!important;
+}
+
+/*Levels text and Popups...*/
+.levels{
+	font-family: "pixelFont";
+  	src: url("./includes/fonts/PressStart2P.ttf");
+  	position: absolute;
+	display: inline-block;
+	text-align: center;
+  	font-size: 2vw;
+  	z-index: 1500;
+  	top: 20%!important;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	-webkit-animation: fadein 5s;
+  	animation: fadein 5s;
+}
+#gameInstr{
+	margin-top: 10vw;
+	height: 35vw;
+	width: 25vw;
+}
+#lastDino{
+	display: none;
+	top: 15%!important;
+}
+#level1{
+	display: none;
+}
+#level2{
+	display: none;
+}
+#level3{
+	display: none;
+}
+#level4{
+	display: none;
+}
+#level5{
+	display: none;
+}
+#level6{
+	display: none;
+}
+
+
+
+/*Effects all*/
+#bottomWrapper, #topWrapper{	
+	position: absolute;
+	display: block;	
+	padding-bottom: calc(100% * 9 / 16);
+}
+
+
+/*Ground model*/
+#groundModel{
+	height: 100px;
+	width: 100%;
+	/*background-color: orange;*/
+	position: absolute;
+	top: 99%;
+	display: inline-block; 
+	padding-bottom: calc(100% * 9 / 16);
+}
+
+/*Button Effects for border drawing*/
+.draw-border {
+	display: inline;
+	 box-shadow: inset 0 0 0 4px #d4cfcf;
+	 color: #d4cfcf;
+	 transition: color 0.25s 0.0833333333s; 
+	 position: relative;
+	 z-index: 1000;
+}
+ .draw-border::before, .draw-border::after {
+	 border: 0 solid transparent;
+	 box-sizing: border-box;
+	 content: '';
+	 pointer-events: none;
+	 position: absolute;
+	 width: 0;
+	 height: 0;
+	 bottom: 0;
+	 right: 0;
+}
+ .draw-border::before {
+	 border-bottom-width: 4px;
+	 border-left-width: 4px;
+}
+ .draw-border::after {
+	 border-top-width: 4px;
+	 border-right-width: 4px;
+}
+ .draw-border:hover {
+	 color: #000000;
+}
+ .draw-border:hover::before, .draw-border:hover::after {
+	 border-color: #000000;
+	 transition: border-color 0s, width 0.25s, height 0.25s;
+	 width: 100%;
+	 height: 100%;
+}
+ .draw-border:hover::before {
+	 transition-delay: 0s, 0s, 0.25s;
+}
+ .draw-border:hover::after {
+	 transition-delay: 0s, 0.25s, 0s;
+}
+ .btn {
+	 background: none;
+	 border: none;
+	 cursor: pointer;
+	 line-height: 1.5;
+	 font: 70 1.2rem 'Roboto Slab', sans-serif;
+	 padding: 1em 2em;
+	 letter-spacing: 0.05rem;
+	 z-index: 1000;
+}
+ .btn:focus {
+	 outline: 2px dotted #000000;
+}
+
+/*Used for bound areas, hill area*/
+.hillBoundsTop{
+  background-color: rgb(0,0,0,0.0);
+  position: absolute;
+  z-index: 140;
+  height: 3em;
+  width: 20%;
+  bottom: 15%;
+  left: 40%;
+  padding-bottom: calc(100% * 8 / 16);
+}
+
+.hillBoundsMiddle1{
+  background-color: rgb(0,0,0,0.0);
+  position: absolute;
+  z-index: 140;
+  height: 1.5em;
+  width: 50%;
+  bottom: 13%;
+  left: 25%;
+  padding-bottom: calc(100% * 8 / 16);
+}
+.hillBoundsMiddle2{
+  background-color: rgb(0,0,0,0.0);
+  position: absolute;
+  z-index: 140;
+  height: 1.5em;
+  width: 35%;
+  bottom: 15%;
+  left: 32.5%;
+  padding-bottom: calc(100% * 8 / 16);
+}
+.hillBoundsMiddle3{
+  background-color: rgb(0,0,0,0.0);
+  position: absolute;
+  z-index: 140;
+  height: 1.25em;
+  width: 60%;
+  bottom: 11%;
+  left: 20%;
+  padding-bottom: calc(100% * 8 / 16);
+}
+.hillBoundsBottom{
+  background-color: rgb(0,0,0,0.0);
+  position: absolute;
+  z-index: 140;
+  height: 5.5em;
+  width: 70%;
+  bottom: 3%;
+  left: 15%;
+  padding-bottom: calc(100% * 8 / 16);
+}
+
